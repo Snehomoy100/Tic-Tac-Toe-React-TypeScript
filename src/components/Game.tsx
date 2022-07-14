@@ -23,5 +23,12 @@ const isWinner = (values: number[]) => {
 };
 
 
+const initialValues = Array(9).fill('');
+const initialPlayer = 'O';
+const initialWinner = '';
+
+
+
+
 
 
