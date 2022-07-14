@@ -1,4 +1,5 @@
 import React from "react";
+import '../Game.scss'
 
 const { useState, useMemo } = React;
 
@@ -15,13 +16,10 @@ const lines = [
 
 const isWinner = (values: number[]) => {
     for( const [i, j, k] of lines ) {
-        if(values[i] && values[i] === values[j] && values[j] === values[k]){
-            return true;
-        }
-        return false;
+        if(values[i] && values[i] === values[j] && values[j] === values[k]) return true;
     }
+    return false;
 };
-
 
     const initialValues = Array(9).fill('');
     const initialPlayer = 'O';
@@ -79,7 +77,6 @@ const Game: React.FC = () => {
                     Player: {player}
                     { winner && ` | Winner: ${winner}`}
                 </h3>
-
                 <button
                     type="button"
                     onClick={reset}
