@@ -1,5 +1,5 @@
 import React from "react";
-import '../Game.scss'
+import '../game.scss'
 
 const { useState, useMemo } = React;
 
