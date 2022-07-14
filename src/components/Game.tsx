@@ -27,6 +27,42 @@ const initialValues = Array(9).fill('');
 const initialPlayer = 'O';
 const initialWinner = '';
 
+const TicTacToe: React.FC = () => {
+    const [ values, setValues ] = useState(initialValues);
+    const [ player, setPlayer ] = useState(initialPlayer);
+    const [ winner, setWinner ] = useState(initialWinner);
+
+    useMemo(() => {
+        if(isWinner(values)) {
+            setWinner(player);
+            return;
+        }
+
+        setPlayer(player === 'O' ? 'X' : 'O');
+
+    }, [values]);
+
+    const play = (index: number) => {
+        if(winner) return;
+        if(values[index]) return;
+
+        setValues(earlierValues => earlierValues.map((values, _index) => (
+            _index === index ? player : values
+        )));
+    };
+
+    const reset = () => {
+        setValues(initialValues);
+        setPlayer(initialPlayer);
+        setWinner(initialWinner);
+    }
+
+    return (
+        
+    )
+};
+
+
 
 
 
