@@ -27,7 +27,7 @@ const initialValues = Array(9).fill('');
 const initialPlayer = 'O';
 const initialWinner = '';
 
-const TicTacToe: React.FC = () => {
+const Game: React.FC = () => {
     const [ values, setValues ] = useState(initialValues);
     const [ player, setPlayer ] = useState(initialPlayer);
     const [ winner, setWinner ] = useState(initialWinner);
@@ -58,7 +58,7 @@ const TicTacToe: React.FC = () => {
     }
 
     return (
-        
+
     )
 };
 
