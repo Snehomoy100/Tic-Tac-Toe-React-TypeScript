@@ -23,9 +23,9 @@ const isWinner = (values: number[]) => {
 };
 
 
-const initialValues = Array(9).fill('');
-const initialPlayer = 'O';
-const initialWinner = '';
+    const initialValues = Array(9).fill('');
+    const initialPlayer = 'O';
+    const initialWinner = '';
 
 const Game: React.FC = () => {
     const [ values, setValues ] = useState(initialValues);
@@ -58,10 +58,40 @@ const Game: React.FC = () => {
     }
 
     return (
+        <div>
+            <div className="grids">
+                {
+                    values.map((value, index) => (
+                        <div
+                            role="button"
+                            tabIndex={0}
+                            key={index}
+                            onClick={() => play(index)}
+                            onKeyPress={() => play(index)}
+                        >
+                            {value}
+                        </div>
+                    ))
+                }
+            </div>
+            <div className="info">
+                <h3>
+                    Player: {player}
+                    { winner && ` | Winner: ${winner}`}
+                </h3>
 
-    )
+                <button
+                    type="button"
+                    onClick={reset}
+                >
+                    Reset Game
+                </button>
+            </div>
+        </div>
+    );
 };
 
+export default Game;
 
 
 
