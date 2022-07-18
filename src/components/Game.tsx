@@ -21,9 +21,9 @@ const isWinner = (values: number[]) => {
     return false;
 };
 
-    const initialValues = Array(9).fill('');
-    const initialPlayer = 'O';
-    const initialWinner = '';
+const initialValues = Array(9).fill('');
+const initialPlayer = 'O';
+const initialWinner = '';
 
 const Game: React.FC = () => {
     const [ values, setValues ] = useState(initialValues);
@@ -74,7 +74,10 @@ const Game: React.FC = () => {
             </div>
             <div className="info">
                 <h3>
-                    Player: {player}
+                    Player1 (O) V/S Player2 (X)
+                </h3>
+                <h3>
+                    Now it's {player}'s turn
                     { winner && ` | Winner: ${winner}`}
                 </h3>
                 <button

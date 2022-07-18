@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Mali&display=swap");
 
-$color-bg: #d3cce3;
+$color-bg: #FF9347;
 $color-border: #555;
 $color-font: #333;
 
@@ -66,6 +66,8 @@ body {
 
 .info {
   text-align: center;
+  font-weight: bold;
+  font-size: 18px;
 
   button {
     padding: 8px 16px;
