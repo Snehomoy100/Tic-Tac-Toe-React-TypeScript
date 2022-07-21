@@ -25,6 +25,15 @@ body {
   align-items: center;
 }
 
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  font-size: 25px;
+  font-weight: 100px;
+}
+
 .grids {
   display: flex;
   flex-wrap: wrap;

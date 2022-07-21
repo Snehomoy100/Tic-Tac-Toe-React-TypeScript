@@ -1,5 +1,5 @@
 import React from "react";
-import '../game.scss'
+import '../style/game.scss'
 
 const { useState, useMemo } = React;
 
@@ -25,7 +25,7 @@ const initialValues = Array(9).fill('');
 const initialPlayer = 'O';
 const initialWinner = '';
 
-const Game: React.FC = () => {
+const Game = () => {
     const [ values, setValues ] = useState(initialValues);
     const [ player, setPlayer ] = useState(initialPlayer);
     const [ winner, setWinner ] = useState(initialWinner);
@@ -57,6 +57,9 @@ const Game: React.FC = () => {
 
     return (
         <div>
+            <div className="heading">
+                <h1>Tic Tac Toe</h1>
+            </div>
             <div className="grids">
                 {
                     values.map((value, index) => (
